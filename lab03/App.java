@@ -74,7 +74,7 @@ public class App {
                     String precoMinStr = sc.nextLine();
                     double precoMinimo;
                     try {
-                        // aceita vírgula ou ponto
+                        
                         precoMinimo = Double.parseDouble(precoMinStr.replace(",", "."));
                     } catch (NumberFormatException e) {
                         System.out.println("Valor inválido!");
@@ -103,7 +103,7 @@ public class App {
             List<String> linhas = Files.readAllLines(arquivo);
             for (String linha : linhas) {
                 String[] c = linha.split(";");
-                if (c.length < 3) continue; // linha inválida
+                if (c.length < 3) continue; 
                 Produto p = new Produto(c[0], Double.parseDouble(c[1]), c[2]);
                 produtos.add(p);
             }
